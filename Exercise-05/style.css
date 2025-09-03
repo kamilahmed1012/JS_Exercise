@@ -1,0 +1,113 @@
+:root {
+    --bg: #050505;
+    --fg: #00ff88;
+    --dim: #0a3;
+    }
+* { 
+    box-sizing: border-box; 
+}
+html, body { 
+    height: 100%; 
+    margin: 0; 
+}
+body {
+    display: grid;
+    place-items: center;
+    background: radial-gradient(1200px 800px at 50% 0%, #0b0b0b 0%, #000 60%) fixed var(--bg);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    color: var(--fg);
+}
+.terminal {
+    width: min(800px, 92vw);
+    height: min(420px, 70vh);
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid #0b2;
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.15), inset 0 0 30px rgba(0, 255, 136, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+.header {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0a2a1a;
+    margin-bottom: 12px;
+    color: #7cffc0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+.lights {
+    margin-left: auto; 
+    display: flex; 
+    gap: 6px; 
+}
+/* .dot { 
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%; 
+    background: #063; 
+    box-shadow: 0 0 8px #063; 
+}
+.dot.on { 
+    background: #0f6; 
+    box-shadow: 0 0 12px #0f6; 
+} */
+
+#screen {
+    margin: 0;
+    white-space: pre-wrap;
+    line-height: 1.35;
+    font-size: 15px;
+    color: var(--fg);
+    text-shadow: 0 0 6px rgba(0, 255, 136, 0.6);
+    height: calc(100% - 46px);
+    overflow-y: auto;
+}
+.terminal:after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+    repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 136, 0.05) 0px,
+        rgba(0, 255, 136, 0.05) 2px,
+        transparent 3px,
+        transparent 4px
+    );
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+}
+.cursor {
+    display: inline-block;
+    width: 10px;
+    margin-left: 2px;
+    background: var(--fg);
+    animation: blink 0.9s steps(1, end) infinite;
+    box-shadow: 0 0 6px rgba(0, 255, 136, 0.6);
+}
+@keyframes blink { 
+    50% { opacity: 0; } 
+}
+
+.actions {
+    position: absolute; right: 10px; top: 10px; display: flex; gap: 8px;
+}
+.btn {
+    border: 1px solid #0d4;
+    background: transparent;
+    color: var(--fg);
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font: inherit;
+    transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { 
+    transform: translateY(-1px);
+     box-shadow: 0 6px 20px rgba(0,255,136,.12); 
+}
+.btn:active { 
+    transform: translateY(0);
+}
