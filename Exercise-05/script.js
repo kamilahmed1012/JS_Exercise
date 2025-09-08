@@ -50,4 +50,3 @@ document.getElementById('runBtn').addEventListener('click', async ()=>{
 document.getElementById('clearBtn').addEventListener('click', clearScreen)
 
 window.addEventListener('DOMContentLoaded', runHack)
-
