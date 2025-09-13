@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tribute</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo" aria-hidden>AL</div>
+                <div>
+                    <h1>Ada Lovelace</h1>
+                    <p class="lead">Mathematician · Visionary computing · 1815-1852</p>
+                </div>
+            </div>
+            
+           <div class="control">
+                <div class="toggle" role="toolbar" aria-label="Theme controls">
+                    <button id="themeBtn" aria-pressed="false" title="Toggle dark / light">Toggle Theme</button>
+                </div>
+                <a href="#timeline" class="cta">Learn her story</a>
+           </div>
+        </header>
+        <main>
+            <section class="hero">
+                <article class="card">
+                    <h2 style="margin-top:0">
+                        Why she's remembered
+                    </h2>
+                    <p class="bio">
+                        Augusta Ada King, Countess of Lovelace (known as Ada Lovelace), is celebrated for her work
+                    </p>
+                    <div class="fact" aria-hidden>
+                        <div class="fact">Born: 10 Dec 1815</div>
+                        <div class="fact">Nationality: British</div>
+                        <div class="fact">Know for: Analytical Engine notes</div>
+                        <div class="fact">Legacy: Programming pioneer</div>
+                    </div>
+                    <div class="timeline card" id="timeline" style="margin-top:18px">
+                        <h2>Timeline</h2>
+                        <div class="events">
+                            <div class="event">
+                                <h3>1815 - Birth</h3>
+                                <time>Born in London, daughter of Lord Byron & Annabella Milbanke</time>
+                            </div>
+                            <div class="event">
+                                <h3>1833 - Met Charles Babbage</h3>
+                                <time>Became interested in the concept of mechanical computstion</time>
+                            </div>
+                            <div class="event">
+                                <h3>1843 - Published seminal notes</h3>
+                                <time>Translated and annotated Menabrea's paper; added an algorithm for the Analytical Engine</time>
+                            </div>
+                            <div class="event">
+                                <h3>1852 - Death</h3>
+                                <time datetime="">Died in Marylebone, London</time>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <aside class="card portrait" aria-label="Portrait and gallery">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg" alt="Portrait of Ada Lovelace (engraving)">
+                    <div style="margin-top:14px">
+                        <h3 style="margin:0 0 6px 0">In her own words</h3>
+                        <div class="quote" role="note">
+                            <blockquote>"That brain of mine is more than merely mortal, as time will show."</blockquote>
+                            <cite>— Ada Lovelace</cite>
+                        </div>
+                        <div style="margin-top:12px">
+                            <h4 style="margin:0 0 8px 0">Gallery</h4>
+                            <div class="gallery" aria-hidden>
+                                <img src="./gallery-01.jpeg" alt="Ada Lovelace portrait 2">
+                                <img src="./gallery-02.jpeg" alt="Charles Babbage portrait">
+                                <img src="./gallery-03.jpeg" alt="Analytical Engine illustration">
+                                <img src="gallery-04.png" alt="Sample notes page">
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <section class="card" style="margin-top:22px">
+                <h2 style="margin-top:0">Why she matters today</h2>
+                <p class="bio">Ada's ideas about algorithms, machines, and abstract manipulation of symbols are foundational to modern computing. Beyond the specific algorithm she wrote, her vision of computers as more than calculators — machines that could manipulate symbols and compose complex processes — presaged software, data, and the concept of programmability.</p>
+            </section>
+            <section class="card" style="margin-top:18px">
+                <h2 style="margin-top:0">Further reading & resources</h2>
+                <p class="bio">Explore biographies, digitized papers, and museum collections to learn more. If you'd like, I can add a curated resource list or export this page as a printable PDF.</p>
+            </section>
+        </main>
+        <footer>
+            Made with ❤️ — a simple, accessible tribute page template. Customize the images, text, or colors as you like.
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
